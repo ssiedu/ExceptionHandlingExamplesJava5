@@ -1,5 +1,4 @@
-
-public class ExOne {
+public class ExTwo {
 
     public static void main(String[] args) {
         System.out.println("Starting Calculation");
@@ -10,16 +9,11 @@ public class ExOne {
             y = Integer.parseInt(args[1]);
             z = x / y;
         }catch(ArithmeticException e){
-            System.out.println("ArithmeticException Handled");
-                try{
-                    z=x/Integer.parseInt(args[2]);
-                }catch(ArrayIndexOutOfBoundsException e1){
                     z=x/2;
-                }
-        }catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Insufficient Values");
-        }catch(NumberFormatException e){
-            System.out.println("Invalid Numbers");
+        }catch(ArrayIndexOutOfBoundsException | NumberFormatException e){
+            System.out.println("Wrong Inputs");
+        }catch(Exception e){
+            System.out.println("Unknown Errors");
         }
             
 
